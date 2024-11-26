@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPCS - Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Ensure full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Flexbox to ensure content stretches to fill space */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Adjust scrolling banner */
+.scrolling-banner {
+    background-color: #f8f9fa;
+    padding: 10px;
+    color: #333;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%; /* Set the width to 100% */
+    margin: 0 auto; /* Center the banner horizontally */
+    position: relative;
+    height: 100px; /* Ensure enough space for the text */
+}
+
+.scrolling-banner p {
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    display: flex;
+    animation: scroll-right-left 20s linear infinite; /* Continuous right-to-left animation */
+    margin: 0;
+    white-space: nowrap;
+}
+
+.scrolling-banner p span {
+    padding-right: 100%; /* Adds space between the texts to ensure they don't overlap */
+}
+
+@keyframes scroll-right-left {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left */
+    }
+}
+
+/* Ensure footer stays at the bottom */
+footer {
+    margin-top: auto;
+}
+
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white p-3">
+        <div class="container">
+            <h1>Solar Powered Charging Station</h1>
+            <p>Your sustainable energy solution</p>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">SPCS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="text-center">
+            <h2>Welcome to SPCS</h2>
+            <p>Find the nearest solar-powered charging stations.</p>
+        </div>
+
+        <!-- Auto-scrolling Banner -->
+        <div class="scrolling-banner">
+            <p>SPCS is expanding! New solar-powered charging stations are being added every month. Stay tuned for more updates.</p>
+        </div>
+        <br><br><br>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <h3>Dashboard</h3>
+                <p>View nearest stations' at a glance.</p><br>
+                <a href="dashboard.html" class="btn btn-primary">Explore Dashboard</a>
+            </div>
+            
+            <div class="col-md-4">
+                <h3>Reports</h3>
+                <p>Analyze and export reports for better decision-making.</p>
+                <a href="reports.html" class="btn btn-primary">View Reports</a>
+            </div>
+            <div class="col-md-4">
+                <h3>Contact Us</h3>
+                <p>We'd love to hear from you! Contact us, fill out the form to get in touch.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>&copy; 2024 Solar Powered Charging Station | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
